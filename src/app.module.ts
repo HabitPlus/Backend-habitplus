@@ -6,7 +6,6 @@ import { ContentModule } from './content/content.module';
 import {MongooseModule} from '@nestjs/mongoose'
 import { UserModule } from './user/user.module';
 
-
 @Module({
   imports: [
     MongooseModule.forRoot(
