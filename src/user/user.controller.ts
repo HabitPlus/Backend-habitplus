@@ -43,9 +43,9 @@ export class UserController {
   }
 
   //Pending: only author can do that
-  @ApiBearerAuth()
+  // @ApiBearerAuth()
   @Roles(Role.ADMIN)
-  @UseGuards(JwtAuthGuard, RolesGuard)
+  // @UseGuards(JwtAuthGuard, RolesGuard)
   @Delete(':id')
   async remove(@Param('id') id: string) {
     return this.userService.remove(id);
