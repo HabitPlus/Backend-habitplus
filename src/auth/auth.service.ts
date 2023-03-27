@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { HttpException, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
@@ -19,6 +20,7 @@ export class AuthService {
   async register(userObject: RegisterAuthDto) {
     const { password } = userObject;
     const plainToHash = await hash(password, 10)
+    console.log(plainToHash)
     userObject = {...userObject, password:plainToHash};
     return this.userModel.create(userObject);
   }
@@ -26,6 +28,7 @@ export class AuthService {
   async login(userObjectLogin: LoginAuthDto) {
 
     const { email, password } = userObjectLogin;
+    console.log(password)
     const findUser = await this.userModel.findOne({email})
     if (!findUser) {
       throw new HttpException('USER_NOT_FOUND', 404);

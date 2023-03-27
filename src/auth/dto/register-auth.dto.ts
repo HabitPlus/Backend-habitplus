@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { PartialType } from '@nestjs/swagger';
 import { IsNotEmpty } from 'class-validator';
 import { LoginAuthDto } from './login-auth.dto';
