@@ -1,5 +1,7 @@
+/* eslint-disable prettier/prettier */
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { ExtractJwt, Strategy } from "passport-jwt";
+// import { Strategy } from "passport-local";
 import { PassportStrategy } from "@nestjs/passport";
 import { jwtConstants } from "../constants/jwt.constants";
 
