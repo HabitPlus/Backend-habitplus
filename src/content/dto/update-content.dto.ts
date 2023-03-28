@@ -4,12 +4,17 @@ import { CreateContentDto } from './create-content.dto';
 
 export class UpdateContentDto extends PartialType(CreateContentDto) {
     @ApiProperty({
-        example: "Las castanyas son muy ricas",
+        example: "Nutricion",
     })
-    paragraph: string;
+    section: string;
     
     @ApiProperty({
         example: "Comidas recomendadas",
     })
     title: string;
+
+    @ApiProperty({
+        example: "Las castanyas son muy ricas",
+    })
+    paragraph: string;
 }
