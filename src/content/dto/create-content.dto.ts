@@ -4,6 +4,11 @@ import { ApiProperty } from "@nestjs/swagger";
 /* eslint-disable prettier/prettier */
 export class CreateContentDto {
     @ApiProperty({
+        example: "Nutricion",
+    })
+    section: string;
+
+    @ApiProperty({
         example: 'Cocina Saludable',
     })
     title: string;
@@ -12,5 +17,4 @@ export class CreateContentDto {
         example: 'lorem ipsum bla bla bla',
     })
     paragraph: string;
-
 }
